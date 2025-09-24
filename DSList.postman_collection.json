@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "c5e3aed0-2f4f-418a-a642-68592b07a327",
+		"name": "DSList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47798928",
+		"_collection_link": "https://vittor-camilo-8636343.postman.co/workspace/Intensiv%C3%A3o~6f9522f9-b80e-45fe-a63c-f2a79a70f0fe/collection/47798928-c5e3aed0-2f4f-418a-a642-68592b07a327?action=share&source=collection_link&creator=47798928"
+	},
+	"item": [
+		{
+			"name": "Games",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Games lists",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Games by lists",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Game by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "List replacement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceIndex\": 3,\r\n    \"destinationIndex\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/lists/2/replacement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lists",
+						"2",
+						"replacement"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
