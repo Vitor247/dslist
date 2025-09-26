@@ -50,6 +50,5 @@ public class GameListService {
 	        gameListRepository.updateBelongingPosition(listId, list.get(i).getId(), i);
 	    }
 	}
-
 	
 }
