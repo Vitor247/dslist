@@ -10,7 +10,9 @@ import com.devsuperior.dslist.dto.GameDTO;
 import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.entities.Game;
 import com.devsuperior.dslist.projections.GameMinProjection;
+import com.devsuperior.dslist.repositories.GameListRepository;
 import com.devsuperior.dslist.repositories.GameRepository;
+import com.devsuperior.dslist.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class GameService {
@@ -18,10 +20,14 @@ public class GameService {
 	@Autowired
 	private GameRepository gameRepository;
 	
+	@Autowired
+	private GameListRepository gameListRepository;
+	
 	@Transactional(readOnly = true)
 	public GameDTO findById(Long id) {
-		Game result = gameRepository.findById(id).get();
-		return new GameDTO(result);
+		Game result = gameRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado: " + id));
+	    return new GameDTO(result);
 	}
 	
 	@Transactional(readOnly = true)
@@ -31,8 +37,12 @@ public class GameService {
 	}
 	
 	@Transactional(readOnly = true)
-	public List<GameMinDTO> findByList(Long listId){
-		List<GameMinProjection> result = gameRepository.searchByList(listId);
-		return result.stream().map(x -> new GameMinDTO(x)).toList();
+	public List<GameMinDTO> findByList(Long listId) {
+	    gameListRepository.findById(listId)
+	        .orElseThrow(() -> new ResourceNotFoundException("Lista não encontrada: " + listId));
+
+	    List<GameMinProjection> result = gameRepository.searchByList(listId);
+	    return result.stream().map(GameMinDTO::new).toList();
 	}
+
 }
