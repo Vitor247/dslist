@@ -3,7 +3,7 @@
 
 # Sobre o projeto
 
-GameList é uma API REST desenvolvida com Java e Spring Boot durante o *Intensivão Java Spring*. evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+GameList é uma API REST desenvolvida com Java e Spring Boot durante o *Intensivão Java Spring*. evento organizado pela [DevSuperior](https://devsuperior.com.br "Site da DevSuperior").
 
 A aplicação consiste na organização de listas de jogos. Ela permite consultar informações detalhadas sobre games e gerenciar sua ordenação dentro de listas personalizadas, como uma prateleira digital.
 
