@@ -47,7 +47,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseURL}}/lists/4/games",
+					"raw": "{{baseURL}}/lists/2/games",
 					"host": [
 						"{{baseURL}}"
 					],
