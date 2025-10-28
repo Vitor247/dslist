@@ -11,7 +11,16 @@
 			"name": "Games",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/games",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"games"
+					]
+				}
 			},
 			"response": []
 		},
@@ -19,7 +28,16 @@
 			"name": "Games lists",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/lists",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"lists"
+					]
+				}
 			},
 			"response": []
 		},
@@ -27,7 +45,18 @@
 			"name": "Games by lists",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/lists/4/games",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"lists",
+						"4",
+						"games"
+					]
+				}
 			},
 			"response": []
 		},
@@ -35,7 +64,17 @@
 			"name": "Game by id",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/games/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"games",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
@@ -54,12 +93,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/lists/2/replacement",
-					"protocol": "http",
+					"raw": "{{baseURL}}/lists/2/replacement",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
 						"lists",
 						"2",
@@ -68,6 +105,13 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
