@@ -31,7 +31,7 @@ Pré-requisitos: Java 17
 # clonar repositório
 git clone https://github.com/Vitor247/dslist
 
-# entrar na pasta do projeto back end
+# entrar na pasta
 cd dslist
 
 # executar o projeto
@@ -39,6 +39,8 @@ cd dslist
 ```
 
 ## Endpoints da API
+
+Coleção para importar no [postman](https://github.com/Vitor247/dslist/blob/main/DSList.postman_collection.json).
 
 | Método | Endpoint      | Descrição                                              |
 | :----: | ------------- | ------------------------------------------------------ |
